@@ -45,12 +45,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
             }
         };
-        cadastrarClientes = new Telas.CadastrarClientes();
-        cadastrarProdutos = new Telas.CadastrarProdutos();
-        consultarClientes = new Telas.ConsultarClientes();
-        consultarProdutos = new Telas.ConsultarProdutos();
-        vendasProdutos = new Telas.VendasProdutos();
-        relatorio = new Telas.Relatorio();
         BarraMenu = new javax.swing.JMenuBar();
         menuClientes = new javax.swing.JMenu();
         itemCadastroClientes = new javax.swing.JMenuItem();
@@ -62,6 +56,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         itemLançamentos = new javax.swing.JMenuItem();
         menuRelatorio = new javax.swing.JMenu();
         itemConsultarRelatorio = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Tela Principal");
@@ -82,12 +77,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         panelPrincipal.add(telaPrincipal, "telaPrincipal");
-        panelPrincipal.add(cadastrarClientes, "cadastrarClientes");
-        panelPrincipal.add(cadastrarProdutos, "cadastrarProdutos");
-        panelPrincipal.add(consultarClientes, "consultarClientes");
-        panelPrincipal.add(consultarProdutos, "consultarProdutos");
-        panelPrincipal.add(vendasProdutos, "vendaProdutos");
-        panelPrincipal.add(relatorio, "relatorio");
 
         menuClientes.setText("Clientes");
 
@@ -165,6 +154,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         BarraMenu.add(menuRelatorio);
 
+        jMenu1.setText("Sair");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        BarraMenu.add(jMenu1);
+
         setJMenuBar(BarraMenu);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -219,6 +216,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         consulta.show(panelPrincipal, "relatorio");
     }//GEN-LAST:event_itemConsultarRelatorioActionPerformed
 
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        System.exit(0);
+                
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -257,24 +259,19 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar BarraMenu;
-    private Telas.CadastrarClientes cadastrarClientes;
-    private Telas.CadastrarProdutos cadastrarProdutos;
-    private Telas.ConsultarClientes consultarClientes;
-    private Telas.ConsultarProdutos consultarProdutos;
     private javax.swing.JMenuItem itemCadastrarProduto;
     private javax.swing.JMenuItem itemCadastroClientes;
     private javax.swing.JMenuItem itemConsultarClientes;
     private javax.swing.JMenuItem itemConsultarRelatorio;
     private javax.swing.JMenuItem itemLançamentos;
     private javax.swing.JMenuItem itemPesquisarProduto;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu menuClientes;
     private javax.swing.JMenu menuProdutos;
     private javax.swing.JMenu menuRelatorio;
     private javax.swing.JMenu menuVendas;
     private javax.swing.JPanel panelPrincipal;
-    private Telas.Relatorio relatorio;
     private javax.swing.JPanel telaPrincipal;
-    private Telas.VendasProdutos vendasProdutos;
     // End of variables declaration//GEN-END:variables
 
 }
