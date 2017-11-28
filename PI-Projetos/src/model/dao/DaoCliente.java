@@ -30,7 +30,10 @@ public class DaoCliente {
         //utilizando os dados do clientes passados como parâmetro
         
         String sql = "INSERT INTO cliente (nome, sobrenome, "
-                + "data_nasc, sexo, enabled) VALUES (?, ?, ?, ?, ?)";
+                + "data_nasc, rg, cpf, sexo, estadoCivil,"
+                + " email, telefone, cep, endereço, numEnd, complemento,"
+                + " bairro, cep, cidade, estado,  enabled) VALUES (?, ?, ?,"
+                + " ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         //Conexão para abertura e fechamento
         
@@ -56,8 +59,21 @@ public class DaoCliente {
             preparedStatement.setString(2, cliente.getSobrenome());
             Timestamp t = new Timestamp(cliente.getDataNasc().getTime());
             preparedStatement.setTimestamp(3, t);
-            preparedStatement.setString(4, cliente.getSexo());
-            preparedStatement.setBoolean(5, true);
+            preparedStatement.setString(4, cliente.getRg());
+            preparedStatement.setString(5, cliente.getCpf());
+            preparedStatement.setString(6, cliente.getSexo());
+            preparedStatement.setString(7, cliente.getEstadoCivil());
+            preparedStatement.setString(8, cliente.getEmail());
+            preparedStatement.setString(9, cliente.getTelefone());
+            preparedStatement.setString(10, cliente.getCep());
+            preparedStatement.setString(11, cliente.getEndereco());
+            preparedStatement.setString(12, cliente.getNumEnd());
+            preparedStatement.setString(13, cliente.getComplemento());
+            preparedStatement.setString(14, cliente.getCep());
+            preparedStatement.setString(15, cliente.getEndereco());
+            preparedStatement.setString(16, cliente.getCidade());
+            preparedStatement.setString(17, cliente.getEstado());
+            preparedStatement.setBoolean(18, true);
             
             //Executa o comando no banco de dados
             preparedStatement.execute();
@@ -86,7 +102,9 @@ public class DaoCliente {
         //Monta a string de atualização do cliente no BD, utilizando
         //prepared statement
         
-        String sql = "UPDATE cliente SET nome=?, sobrenome=?, data_nasc=?, sexo=? "
+        String sql = "UPDATE cliente SET nome=?, sobrenome=?, data_nasc=?, rg=?, cpf=?, sexo=?, estadoCivil=?,"
+                + " email=?, telefone=?, cep=?, endereço=?, numEnd=?, complemento=?,"
+                + " bairro=?, cep=?, cidade=?, estado=?  "
             + "WHERE (cliente_id=?)";
         
         //Conexão para abertura e fechamento
@@ -113,8 +131,21 @@ public class DaoCliente {
             preparedStatement.setString(2, cliente.getSobrenome());
             Timestamp t = new Timestamp(cliente.getDataNasc().getTime());
             preparedStatement.setTimestamp(3, t);
-            preparedStatement.setString(4, cliente.getSexo());
-            preparedStatement.setInt(5, cliente.getId());
+            preparedStatement.setString(4, cliente.getRg());
+            preparedStatement.setString(5, cliente.getCpf());
+            preparedStatement.setString(6, cliente.getSexo());
+            preparedStatement.setString(7, cliente.getEstadoCivil());
+            preparedStatement.setString(8, cliente.getEmail());
+            preparedStatement.setString(9, cliente.getTelefone());
+            preparedStatement.setString(10, cliente.getCep());
+            preparedStatement.setString(11, cliente.getEndereco());
+            preparedStatement.setString(12, cliente.getNumEnd());
+            preparedStatement.setString(13, cliente.getComplemento());
+            preparedStatement.setString(14, cliente.getCep());
+            preparedStatement.setString(15, cliente.getEndereco());
+            preparedStatement.setString(16, cliente.getCidade());
+            preparedStatement.setString(17, cliente.getEstado());
+            preparedStatement.setInt(18, cliente.getId());
             
             //Executa o comando no banco de dados
             
@@ -140,31 +171,47 @@ public class DaoCliente {
     */
     
     public static void excluir(Integer id) throws SQLException, Exception {
+        
         //Monta a string de atualização do cliente no BD, utilizando
         //prepared statement
+        
         String sql = "UPDATE cliente SET enabled=? WHERE (cliente_id=?)";
+        
         //Conexão para abertura e fechamento
+       
         Connection connection = null;
+        
         //Statement para obtenção através da conexão, execução de
         //comandos SQL e fechamentos
+        
         PreparedStatement preparedStatement = null;
         try {
+            
             //Abre uma conexão com o banco de dados
+            
             connection = ConnectionUtils.getConnection();
+            
             //Cria um statement para execução de instruções SQL
+            
             preparedStatement = connection.prepareStatement(sql);
+            
             //Configura os parâmetros do "PreparedStatement"
+            
             preparedStatement.setBoolean(1, false);
             preparedStatement.setInt(2, id);
             
             //Executa o comando no banco de dados
+            
             preparedStatement.execute();
         } finally {
+            
             //Se o statement ainda estiver aberto, realiza seu fechamento
+            
             if (preparedStatement != null && !preparedStatement.isClosed()) {
                 preparedStatement.close();
             }
             //Se a conexão ainda estiver aberta, realiza seu fechamento
+            
             if (connection != null && !connection.isClosed()) {
                 connection.close();
             }
@@ -214,11 +261,15 @@ public class DaoCliente {
             preparedStatement.setBoolean(1, true);
             
             //Executa a consulta SQL no banco de dados
+            
             result = preparedStatement.executeQuery();
             
             //Itera por cada item do resultado
+            
             while (result.next()) {
+                
                 //Se a lista não foi inicializada, a inicializa
+                
                 if (listaClientes == null) {
                     listaClientes = new ArrayList<Cliente>();
                 }
@@ -229,7 +280,21 @@ public class DaoCliente {
                 cliente.setSobrenome(result.getString("sobrenome"));
                 Date d = new Date(result.getTimestamp("data_nasc").getTime());
                 cliente.setDataNasc(d);
+                cliente.setSexo(result.getString("rg"));
+                cliente.setSexo(result.getString("cpf"));
                 cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("estadoCivil"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("Telefone"));
+                cliente.setSexo(result.getString("cep"));
+                cliente.setSexo(result.getString("endereco"));
+                cliente.setSexo(result.getString("numEnd"));
+                cliente.setSexo(result.getString("complemento"));
+                cliente.setSexo(result.getString("bairro"));
+                cliente.setSexo(result.getString("cidade"));
+                cliente.setSexo(result.getString("estado"));
                 //Adiciona a instância na lista
                 listaClientes.add(cliente);
             }
@@ -325,7 +390,21 @@ public class DaoCliente {
                 cliente.setSobrenome(result.getString("sobrenome"));
                 Date d = new Date(result.getTimestamp("data_nasc").getTime());
                 cliente.setDataNasc(d);
+                cliente.setSexo(result.getString("rg"));
+                cliente.setSexo(result.getString("cpf"));
                 cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("estadoCivil"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("Telefone"));
+                cliente.setSexo(result.getString("cep"));
+                cliente.setSexo(result.getString("endereco"));
+                cliente.setSexo(result.getString("numEnd"));
+                cliente.setSexo(result.getString("complemento"));
+                cliente.setSexo(result.getString("bairro"));
+                cliente.setSexo(result.getString("cidade"));
+                cliente.setSexo(result.getString("estado"));
                 
                 //Adiciona a instância na lista
                 
@@ -407,7 +486,21 @@ public class DaoCliente {
                 cliente.setSobrenome(result.getString("sobrenome"));
                 Date d = new Date(result.getTimestamp("data_nasc").getTime());
                 cliente.setDataNasc(d);
+                cliente.setSexo(result.getString("rg"));
+                cliente.setSexo(result.getString("cpf"));
                 cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("sexo"));
+                cliente.setSexo(result.getString("estadoCivil"));
+                cliente.setSexo(result.getString("email"));
+                cliente.setSexo(result.getString("Telefone"));
+                cliente.setSexo(result.getString("cep"));
+                cliente.setSexo(result.getString("endereco"));
+                cliente.setSexo(result.getString("numEnd"));
+                cliente.setSexo(result.getString("complemento"));
+                cliente.setSexo(result.getString("bairro"));
+                cliente.setSexo(result.getString("cidade"));
+                cliente.setSexo(result.getString("estado"));
                 
                 //Retorna o resultado
                 
