@@ -38,7 +38,7 @@ public class ValidadorProduto {
           throw new ProdutoException("Por favor informe a cor "+
                   " do produto");   
       }
-      if(produto.getPreco() == null || "".equals(produto.getPreco()) || produto.getPreco() < 0){
+      if(produto.getPreco() == null || "".equals(produto.getPreco()) || produto.getPreco() > 0){
           throw new ProdutoException("Por favor informe o preço "+
                   " do produto");   
       }
