@@ -183,7 +183,7 @@ public class CadastrarClientes extends javax.swing.JPanel {
 
         lblCpf.setText("CPF:");
 
-        lblSexo.setText("Gênero:");
+        lblSexo.setText("Sexo:");
 
         cbSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "Masculino", "Feminino" }));
 

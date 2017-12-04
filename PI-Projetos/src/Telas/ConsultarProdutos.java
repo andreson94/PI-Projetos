@@ -105,7 +105,7 @@ public class ConsultarProdutos extends javax.swing.JPanel {
 
         jLabel65.setText("Marca:");
 
-        BotaoConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/pesquisa.png"))); // NOI18N
+        BotaoConsulta.setText("Consultar");
         BotaoConsulta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotaoConsultaActionPerformed(evt);
@@ -142,58 +142,99 @@ public class ConsultarProdutos extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
+                        .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel20)
-                            .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel65, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(BarraConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(BotaoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(BotaoExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
-                .addComponent(BotaoCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BarraConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(99, 99, 99)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(BotaoConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BotaoExcluir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 643, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BarraConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20))
+                    .addComponent(jLabel20)
+                    .addComponent(BotaoConsulta))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel64))
+                    .addComponent(jLabel64)
+                    .addComponent(BotaoExcluir))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel65))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BotaoCancelar)
-                            .addComponent(BotaoExcluir))
-                        .addGap(26, 26, 26))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BotaoConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                    .addComponent(jLabel65)
+                    .addComponent(BotaoCancelar))
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(377, 377, 377))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotaoConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoConsultaActionPerformed
+  //Inicializa o sucesso da pesquisa com valor negativo, indicando que
+        //a pesquisa de Produtos teve resultado negativo.
+        boolean Resultado_Consulta;
+        
+        /*Grava o campo de pesquisa como a última pesquisa válida. O resultado da
+        última pesquisa válida é utilizado na atualização da lista*/
+       
+        
+        
+        if (BarraConsulta.getText() != null &&
+                !BarraConsulta.getText().equals("")){
+            
+            try {
+                ultima_consulta = Long.parseLong(BarraConsulta.getText());
+                
+            } catch (Exception e) {
+                //Exibe mensagens de erro na fonte de dados e para
+                
+                JOptionPane.showMessageDialog(this, "Só é possível"
+                        + " pesquisar por um valor inteiro válido",
+                        "Campo de pesquisa inválido", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+        }
+        else {
+            ultima_consulta = null;
+        }
+
+        try {
+            /*Solicita a atualização da lista com o novo critério
+            //de pesquisa (ultima_Pesquisa).*/
+          Resultado_Consulta = Atualizacao();
+        } catch (Exception e) {
+            //Exibe mensagens de erro na fonte de dados e para o processo. 
+            JOptionPane.showMessageDialog(this, e.getMessage(),
+                    "Falha ao obter lista", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        //Exibe mensagem de erro caso a pesquisa não tenha resultados.
+        if (!Resultado_Consulta) {
+            JOptionPane.showMessageDialog(this, "A pesquisa não retornou "
+                + "resultados ", "Sem resultados",
+                JOptionPane.ERROR_MESSAGE);
+        }       
+    }//GEN-LAST:event_BotaoConsultaActionPerformed
 
     private void BotaoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoCancelarActionPerformed
          TelaPrincipal tp = (TelaPrincipal) getRootPane().getParent();
@@ -243,58 +284,6 @@ public class ConsultarProdutos extends javax.swing.JPanel {
     private void BarraConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BarraConsultaActionPerformed
     
     }//GEN-LAST:event_BarraConsultaActionPerformed
-
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-    }// </editor-fold>                        
-
-    private void BotaoConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoConsultaActionPerformed
-        //Inicializa o sucesso da pesquisa com valor negativo, indicando que
-        //a pesquisa de Produtos teve resultado negativo.
-        boolean Resultado_Consulta;
-
-        /*Grava o campo de pesquisa como a última pesquisa válida. O resultado da
-        última pesquisa válida é utilizado na atualização da lista*/
-
-        if (BarraConsulta.getText() != null &&
-            !BarraConsulta.getText().equals("")){
-
-            try {
-                ultima_consulta = Long.parseLong(BarraConsulta.getText());
-
-            } catch (Exception e) {
-                //Exibe mensagens de erro na fonte de dados e para
-
-                JOptionPane.showMessageDialog(this, "Só é possível"
-                    + " pesquisar por um valor inteiro válido",
-                    "Campo de pesquisa inválido", JOptionPane.ERROR_MESSAGE);
-                return;
-            }
-        }
-        else {
-            ultima_consulta = null;
-        }
-
-        try {
-            /*Solicita a atualização da lista com o novo critério
-            //de pesquisa (ultima_Pesquisa).*/
-            Resultado_Consulta = Atualizacao();
-        } catch (Exception e) {
-            //Exibe mensagens de erro na fonte de dados e para o processo.
-            JOptionPane.showMessageDialog(this, e.getMessage(),
-                "Falha ao obter lista", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        //Exibe mensagem de erro caso a pesquisa não tenha resultados.
-        if (!Resultado_Consulta) {
-            JOptionPane.showMessageDialog(this, "A pesquisa não retornou "
-                + "resultados ", "Sem resultados",
-                JOptionPane.ERROR_MESSAGE);
-        }
-    }//GEN-LAST:event_BotaoConsultaActionPerformed
    private void Tabela_Produto (java.awt.event.MouseEvent evt) {                                              
         //Verifica se o clique é um clique duplo.      
         if (evt.getClickCount() == 2) {
