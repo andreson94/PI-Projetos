@@ -2,6 +2,7 @@ package model.produto;
 
 
 public class Produto {
+
     private Long cod_produto;
     private String modelo;
     private String tamanho;
@@ -9,7 +10,9 @@ public class Produto {
     private String cor;
     private String genero;
     private Float preco;
-  
+    private Long  quantidade;
+    
+    
 //metodo para acessar valor do codigo
     public Long getCod_produto(){
         return cod_produto;
@@ -65,6 +68,18 @@ public class Produto {
     public void setPreco(Float preco) {
         this.preco = preco;
     }
-    
+     /**
+     * @return the quantidade
+     */
+    public Long getQuantidade() {
+        return quantidade;
+    }
+
+    /**
+     * @param quantidade the quantidade to set
+     */
+    public void setQuantidade(Long quantidade) {
+        this.quantidade = quantidade;
+    }
     
 }

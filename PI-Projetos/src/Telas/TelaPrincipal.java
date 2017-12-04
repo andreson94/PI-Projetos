@@ -28,6 +28,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        relatorio1 = new Telas.Relatorio();
         panelPrincipal = new javax.swing.JPanel();
         telaPrincipal = new javax.swing.JPanel() {
             private Image image;
@@ -45,6 +46,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
             }
         };
+        cadastrarClientes1 = new Telas.CadastrarClientes();
+        consultarClientes1 = new Telas.ConsultarClientes();
+        consultarProdutos1 = new Telas.ConsultarProdutos();
+        vendasProdutos1 = new Telas.VendasProdutos();
+        cadastrarProdutos1 = new Telas.CadastrarProdutos();
+        relatorio2 = new Telas.Relatorio();
         BarraMenu = new javax.swing.JMenuBar();
         menuClientes = new javax.swing.JMenu();
         itemCadastroClientes = new javax.swing.JMenuItem();
@@ -77,6 +84,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
 
         panelPrincipal.add(telaPrincipal, "telaPrincipal");
+        panelPrincipal.add(cadastrarClientes1, "cadastrarClientes");
+        panelPrincipal.add(consultarClientes1, "consultarClientes");
+        panelPrincipal.add(consultarProdutos1, "consultarProdutos");
+        panelPrincipal.add(vendasProdutos1, "vendaProdutos");
+        panelPrincipal.add(cadastrarProdutos1, "cadastrarProdutos");
+        panelPrincipal.add(relatorio2, "relatorio");
 
         menuClientes.setText("Clientes");
 
@@ -259,6 +272,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar BarraMenu;
+    private Telas.CadastrarClientes cadastrarClientes1;
+    private Telas.CadastrarProdutos cadastrarProdutos1;
+    private Telas.ConsultarClientes consultarClientes1;
+    private Telas.ConsultarProdutos consultarProdutos1;
     private javax.swing.JMenuItem itemCadastrarProduto;
     private javax.swing.JMenuItem itemCadastroClientes;
     private javax.swing.JMenuItem itemConsultarClientes;
@@ -271,7 +288,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu menuRelatorio;
     private javax.swing.JMenu menuVendas;
     private javax.swing.JPanel panelPrincipal;
+    private Telas.Relatorio relatorio1;
+    private Telas.Relatorio relatorio2;
     private javax.swing.JPanel telaPrincipal;
+    private Telas.VendasProdutos vendasProdutos1;
     // End of variables declaration//GEN-END:variables
 
 }

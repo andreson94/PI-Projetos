@@ -33,6 +33,8 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         Cancelar_button = new javax.swing.JButton();
         Tamanho_text = new javax.swing.JTextField();
         Tamanho_label = new javax.swing.JLabel();
+        txtQtde = new javax.swing.JTextField();
+        lblQtde = new javax.swing.JLabel();
 
         Cor_text.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -74,39 +76,35 @@ public class CadastrarProdutos extends javax.swing.JPanel {
 
         Tamanho_label.setText("Tamanho:");
 
+        lblQtde.setText("Quantidade");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(Cancelar_button)
-                .addGap(76, 76, 76)
-                .addComponent(Cadastrar_button)
-                .addGap(123, 123, 123))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Modelo_label)
+                    .addComponent(Preco_float, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(Cor_text, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Marca_text, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Tamanho_text, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Genero_combo, javax.swing.GroupLayout.Alignment.LEADING, 0, 244, Short.MAX_VALUE)
+                        .addComponent(Genero_label, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Tamanho_label, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Marca_label, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Cor_label, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Preco_label, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(Modelo_text, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addComponent(lblQtde)
+                    .addComponent(txtQtde, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Modelo_text)
-                            .addComponent(Genero_combo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Tamanho_text)
-                            .addComponent(Marca_text)
-                            .addComponent(Cor_text, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Genero_label)
-                                    .addComponent(Tamanho_label)
-                                    .addComponent(Marca_label)
-                                    .addComponent(Cor_label)
-                                    .addComponent(Preco_label))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(Preco_float, javax.swing.GroupLayout.DEFAULT_SIZE, 477, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Modelo_label)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(Cancelar_button)
+                        .addGap(39, 39, 39)
+                        .addComponent(Cadastrar_button)))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,11 +133,15 @@ public class CadastrarProdutos extends javax.swing.JPanel {
                 .addComponent(Preco_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Preco_float, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(lblQtde)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtQtde, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cadastrar_button)
-                    .addComponent(Cancelar_button))
-                .addContainerGap(12, Short.MAX_VALUE))
+                    .addComponent(Cancelar_button)
+                    .addComponent(Cadastrar_button))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -152,7 +154,8 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         
         
        try{
-          p.setPreco(Float.parseFloat(Preco_float.getText())); 
+          p.setPreco(Float.parseFloat(Preco_float.getText()));
+          p.setQuantidade(Long.parseLong(txtQtde.getText()));
        }catch (Exception e){
            
        }
@@ -167,6 +170,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         
         p.setGenero((String) Genero_combo.getSelectedItem());
         
+        p.setQuantidade(Long.parseLong(txtQtde.getText()));
         
         
         try{
@@ -191,6 +195,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         Marca_text.setText("");
         Cor_text.setText("");
         Tamanho_text.setText("");
+        txtQtde.setText("");
     }//GEN-LAST:event_Cadastrar_buttonActionPerformed
     //Listener para cancelar(fechar)
     private void Cancelar_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cancelar_buttonActionPerformed
@@ -202,6 +207,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         Marca_text.setText("");
         Cor_text.setText("");
         Tamanho_text.setText("");
+        txtQtde.setText("");
     }//GEN-LAST:event_Cancelar_buttonActionPerformed
 
     private void Tamanho_textActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Tamanho_textActionPerformed
@@ -224,5 +230,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
     private javax.swing.JLabel Preco_label;
     private javax.swing.JLabel Tamanho_label;
     private javax.swing.JTextField Tamanho_text;
+    private javax.swing.JLabel lblQtde;
+    private javax.swing.JTextField txtQtde;
     // End of variables declaration//GEN-END:variables
 }

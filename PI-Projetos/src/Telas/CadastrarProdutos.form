@@ -16,42 +16,32 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="143" max="32767" attributes="0"/>
-              <Component id="Cancelar_button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
-              <Component id="Cadastrar_button" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-          </Group>
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Modelo_text" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Genero_combo" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Tamanho_text" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Marca_text" alignment="0" max="32767" attributes="0"/>
-                          <Component id="Cor_text" alignment="0" pref="477" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="Genero_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Tamanho_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Marca_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Cor_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="Preco_label" alignment="0" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="Preco_float" alignment="0" pref="477" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Component id="Modelo_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="Preco_float" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="Cor_text" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Marca_text" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Tamanho_text" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Genero_combo" alignment="0" pref="244" max="32767" attributes="0"/>
+                      <Component id="Genero_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Tamanho_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Marca_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Cor_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Preco_label" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="Modelo_text" alignment="0" max="32767" attributes="0"/>
                   </Group>
+                  <Component id="lblQtde" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtQtde" min="-2" pref="101" max="-2" attributes="0"/>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="Modelo_label" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="Cancelar_button" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                      <Component id="Cadastrar_button" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
+              <EmptySpace pref="248" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -82,12 +72,16 @@
               <Component id="Preco_label" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="Preco_float" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="34" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblQtde" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtQtde" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="65" max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="Cadastrar_button" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="Cancelar_button" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Cadastrar_button" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="12" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -168,6 +162,13 @@
     <Component class="javax.swing.JLabel" name="Tamanho_label">
       <Properties>
         <Property name="text" type="java.lang.String" value="Tamanho:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtQtde">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblQtde">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Quantidade"/>
       </Properties>
     </Component>
   </SubComponents>
