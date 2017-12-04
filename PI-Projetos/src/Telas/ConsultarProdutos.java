@@ -184,7 +184,7 @@ public class ConsultarProdutos extends javax.swing.JPanel {
                     .addComponent(BotaoCancelar))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(377, 377, 377))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
