@@ -42,6 +42,10 @@ public class ValidadorProduto {
           throw new ProdutoException("Por favor informe o preço "+
                   " do produto");   
       }
+      if(produto.getQuantidade() == null || "".equals(produto.getQuantidade()) || produto.getQuantidade() > 0){
+          throw new ProdutoException("Por favor informe o Quantidade "+
+                  " do produto");
+      }
       
     }
     
