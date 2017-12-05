@@ -11,6 +11,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itemCadastroClientes">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/new_add_user_16734.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar"/>
               </Properties>
               <AccessibilityProperties>
@@ -22,6 +25,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemConsultarClientes">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/xmag_search_find_locate_9940.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
               <AccessibilityProperties>
@@ -40,6 +46,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itemCadastrarProduto">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/Vans_Stone_37300.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Cadastrar"/>
               </Properties>
               <Events>
@@ -48,6 +57,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itemPesquisarProduto">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/xmag_search_find_locate_9940.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
               <Events>
@@ -66,6 +78,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itemLan&#xe7;amentos">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/bagofmoney_dollar_4399.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Lan&#xe7;amentos"/>
               </Properties>
               <Events>
@@ -84,6 +99,9 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="itemConsultarRelatorio">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/Imagens/business_table_order_report_history_2332.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Consultar"/>
               </Properties>
               <Events>

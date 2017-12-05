@@ -52,6 +52,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
 
         Marca_label.setText("Marca:");
 
+        Cadastrar_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Save_icon-icons.com_73702.png"))); // NOI18N
         Cadastrar_button.setText("Cadastrar");
         Cadastrar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +60,7 @@ public class CadastrarProdutos extends javax.swing.JPanel {
             }
         });
 
+        Cancelar_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/cancel_77947_1.png"))); // NOI18N
         Cancelar_button.setText("Cancelar");
         Cancelar_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,12 +80,6 @@ public class CadastrarProdutos extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(143, Short.MAX_VALUE)
-                .addComponent(Cancelar_button)
-                .addGap(76, 76, 76)
-                .addComponent(Cadastrar_button)
-                .addGap(123, 123, 123))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,7 +102,13 @@ public class CadastrarProdutos extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Modelo_label)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 229, Short.MAX_VALUE)
+                        .addComponent(Cancelar_button)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Cadastrar_button)
+                        .addGap(21, 21, 21))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -135,11 +137,11 @@ public class CadastrarProdutos extends javax.swing.JPanel {
                 .addComponent(Preco_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Preco_float, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Cadastrar_button)
                     .addComponent(Cancelar_button))
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGap(17, 17, 17))
         );
     }// </editor-fold>//GEN-END:initComponents
 

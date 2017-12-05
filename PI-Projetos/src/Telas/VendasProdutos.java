@@ -72,6 +72,7 @@ public class VendasProdutos extends javax.swing.JPanel {
             }
         });
 
+        ButtonFinalVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ic_attach_money_128_28210.png"))); // NOI18N
         ButtonFinalVenda.setText("Finalizar Venda");
         ButtonFinalVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +111,7 @@ public class VendasProdutos extends javax.swing.JPanel {
         });
         PaneVendas.setViewportView(TableVendas);
 
+        ButtonIncluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Plus_36851.png"))); // NOI18N
         ButtonIncluir.setText("Incluir");
         ButtonIncluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +119,7 @@ public class VendasProdutos extends javax.swing.JPanel {
             }
         });
 
+        ButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/ic_delete_128_28267.png"))); // NOI18N
         ButtonExcluir.setText("Excluir");
         ButtonExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +137,7 @@ public class VendasProdutos extends javax.swing.JPanel {
             }
         });
 
+        btnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/cancel_77947_1.png"))); // NOI18N
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,6 +145,7 @@ public class VendasProdutos extends javax.swing.JPanel {
             }
         });
 
+        ButtonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/xmag_search_find_locate_9940.png"))); // NOI18N
         ButtonConsultar.setText("Consultar");
         ButtonConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,71 +183,72 @@ public class VendasProdutos extends javax.swing.JPanel {
         vendasLancamentoLayout.setHorizontalGroup(
             vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelCodProd)
-                    .addComponent(labelCliente))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCodProd, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
-                    .addComponent(TextCliente))
-                .addGap(27, 27, 27)
-                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ButtonIncluir)
-                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                        .addComponent(ButtonConsultar)
-                        .addGap(34, 34, 34)
-                        .addComponent(textConsultaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(41, Short.MAX_VALUE))
-            .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
                 .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                                .addComponent(btnCancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ButtonFinalVenda)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelPagamento)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                                        .addComponent(btnCancelar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ButtonExcluir)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(ButtonFinalVenda)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelPagamento)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(labelData)
+                                        .addGap(25, 25, 25)))
+                                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtValorPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(8, 8, 8))
+                            .addComponent(PaneVendas)))
+                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(labelData)
-                                .addGap(25, 25, 25)))
+                                .addComponent(labelCliente)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(TextCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                                .addComponent(labelCodProd)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txtCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtValorPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(8, 8, 8))
-                    .addComponent(PaneVendas))
+                            .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                                .addComponent(ButtonIncluir)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                                .addComponent(ButtonConsultar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                                .addComponent(textConsultaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)))))
                 .addContainerGap())
         );
         vendasLancamentoLayout.setVerticalGroup(
             vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, vendasLancamentoLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addContainerGap()
                 .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelCodProd)
+                    .addComponent(txtCodProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ButtonIncluir))
-                .addGap(16, 16, 16)
-                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelCliente)
-                    .addComponent(TextCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ButtonConsultar)
+                .addGap(18, 18, 18)
+                .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelCliente)
+                        .addComponent(TextCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ButtonConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textConsultaCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addComponent(PaneVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(52, 52, 52)
+                .addComponent(PaneVendas, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
+                .addGap(15, 15, 15)
                 .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
-                        .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ButtonExcluir)
-                            .addComponent(ButtonFinalVenda)
-                            .addComponent(btnCancelar))
-                        .addGap(82, 82, 82))
                     .addGroup(vendasLancamentoLayout.createSequentialGroup()
                         .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelPagamento)
@@ -251,7 +257,13 @@ public class VendasProdutos extends javax.swing.JPanel {
                         .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(labelData)
                             .addComponent(txtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(60, 60, 60))))
+                        .addGap(60, 60, 60))
+                    .addGroup(vendasLancamentoLayout.createSequentialGroup()
+                        .addGroup(vendasLancamentoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ButtonExcluir)
+                            .addComponent(ButtonFinalVenda)
+                            .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(91, 91, 91))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

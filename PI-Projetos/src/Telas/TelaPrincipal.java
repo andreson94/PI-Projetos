@@ -80,6 +80,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuClientes.setText("Clientes");
 
+        itemCadastroClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/new_add_user_16734.png"))); // NOI18N
         itemCadastroClientes.setText("Cadastrar");
         itemCadastroClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +90,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuClientes.add(itemCadastroClientes);
         itemCadastroClientes.getAccessibleContext().setAccessibleName("tela1");
 
+        itemConsultarClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/xmag_search_find_locate_9940.png"))); // NOI18N
         itemConsultarClientes.setText("Consultar");
         itemConsultarClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,6 +104,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menuProdutos.setText("Produtos");
 
+        itemCadastrarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Vans_Stone_37300.png"))); // NOI18N
         itemCadastrarProduto.setText("Cadastrar");
         itemCadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +113,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuProdutos.add(itemCadastrarProduto);
 
+        itemPesquisarProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/xmag_search_find_locate_9940.png"))); // NOI18N
         itemPesquisarProduto.setText("Consultar");
         itemPesquisarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +131,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        itemLançamentos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/bagofmoney_dollar_4399.png"))); // NOI18N
         itemLançamentos.setText("Lançamentos");
         itemLançamentos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +149,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        itemConsultarRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/business_table_order_report_history_2332.png"))); // NOI18N
         itemConsultarRelatorio.setText("Consultar");
         itemConsultarRelatorio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
